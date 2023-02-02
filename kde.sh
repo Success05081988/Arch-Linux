@@ -1,9 +1,9 @@
 #!/bin/bash
 
 sudo timedatectl set-ntp true
-sudo hwclock --systohc
+sudo hwclock --systohc -l
 
-sudo reflector -c Germany -a 6 --sort rate --save /etc/pacman.d/mirrorlist
+sudo reflector --country Germany --latest 5 --sort age --save /etc/pacman.d/mirrorlist
 
 #sudo firewall-cmd --add-port=1025-65535/tcp --permanent
 #sudo firewall-cmd --add-port=1025-65535/udp --permanent
@@ -27,4 +27,4 @@ sudo pacman -S --noconfirm xorg-server xorg-xinit xorg-xkill xterm sddm vlc mate
 sudo systemctl enable sddm
 /bin/echo -e "\e[1;32mREBOOTING IN 5..4..3..2..1..\e[0m"
 sleep 5
-reboot
+sudo reboot
