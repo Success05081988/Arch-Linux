@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ln -sf /usr/share/zoneinfo/Asia/Tashkent /etc/localtime
-hwclock --systohc
+hwclock --systohc -l
 sed -i '398s/.//' /etc/locale.gen
 locale-gen
 echo "LANG=ru_RU.UTF-8" >> /etc/locale.conf
