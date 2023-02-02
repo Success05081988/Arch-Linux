@@ -2,7 +2,7 @@
 
 ln -sf /usr/share/zoneinfo/Asia/Tashkent /etc/localtime
 hwclock --systohc
-sed -i 's/#ru_RU.UTF-8/ru_RU.UTF-8' /etc/locale.gen
+sed -i '398s/.//' /etc/locale.gen
 locale-gen
 echo "LANG=ru_RU.UTF-8" >> /etc/locale.conf
 echo "KEYMAP=ru" > /etc/vconsole.conf
