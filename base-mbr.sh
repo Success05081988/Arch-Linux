@@ -23,7 +23,7 @@ pacman -S --noconfirm grub htop sudo networkmanager network-manager-applet dialo
 # pacman -S --noconfirm xf86-video-amdgpu
 # pacman -S --noconfirm nvidia nvidia-utils nvidia-settings
 
-grub-install --target=i386-pc /dev/sdb # replace sdx with your disk name, not the partition
+grub-install --target=i386-pc /dev/sda # replace sdx with your disk name, not the partition
 grub-mkconfig -o /boot/grub/grub.cfg
 
 systemctl enable NetworkManager
